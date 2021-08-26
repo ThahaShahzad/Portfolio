@@ -8,7 +8,7 @@ const Projects = () => {
     {
       name: 'Reliability Measures',
       desription:
-        ' Collaborated to build a tool which could analyze and evaluate the efficacy of exams and teaching strategies to improve students’ learning outcomes. Created a responsive and intuitive UI for users. Lead the front-end development efforts to create a web app.',
+        ' Collaborated to build a tool which could analyze and evaluate the efficiency of exams and teaching strategies which improved students’ learning outcomes. Created a responsive and intuitive UI for users. Lead the front-end development efforts to create a web app.',
       techUsed: ['React', 'Bootstrap', 'Redux'],
       link: 'https://reliabilitymeasures.com/',
       codeLink: 'https://github.com/Reliability-Measures/RM-UI/tree/release',

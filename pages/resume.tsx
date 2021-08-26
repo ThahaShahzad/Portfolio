@@ -17,19 +17,19 @@ const resume = () => {
             <BiArrowBack className='m-5 w-12 h-12 hover:scale-110' />
           </Link>
           <h1>Thaha Shahzad</h1>
-          <a href='ThahaShahzad Resume.docx'>
+          <a href='ThahaShahzad Resume.pdf'>
             <BiDownload className='m-5 w-12 h-12 hover:scale-110' />
           </a>
         </div>
         <div className='max-w-screen-xl m-auto p-4 text-center md:text-left'>
           <h4 className='text-center'>Front End Developer</h4>
-          <h4 className='text-left mt-5'>Expierence</h4>
+          <h4 className='text-left mt-5'>Experience</h4>
           <article className='text-left'>
-            <h4 className='mt-4 text-xl'>Reliablity Measures - 3 month (contract) </h4>
+            <h4 className='mt-4 text-xl'>Reliability Measures - 3 month (contract) </h4>
             <p className='mt-2 font-bold'>Used: React.js, Redux, React-Router Dom, and React-Hook-Form</p>
             <p className='mt-2'>
-              Built a tool which could analyze and evaluate the efficacy of exams and teaching strategies to improve
-              students’ learning outcomes
+              Built a tool which could analyze and evaluate the effectiveness of exams and teaching strategies to
+              improve students’ learning outcomes
             </p>
           </article>
           <article className='text-left'>
@@ -55,7 +55,7 @@ const resume = () => {
                 <li>AWS</li>
               </ul>
               <ul>
-                <li className='underline font-bold mb-1'>Compatent</li>
+                <li className='underline font-bold mb-1'>Competent</li>
                 <li>CSS/SASS</li>
                 <li>GraphQL</li>
                 <li>Chakara UI</li>
