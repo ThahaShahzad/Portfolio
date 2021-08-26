@@ -10,7 +10,7 @@ import Projects from '../components/Projects'
 
 const Home: NextPage = () => {
   return (
-    <div className='font-all bg-bg text-font h-full'>
+    <div className='font-all bg-bg text-font h-full dark overflow-hidden'>
       <Head>
         <title>Thaha Shahzad</title>
         <meta name='description' content='My protfolio website' />

@@ -1,19 +1,45 @@
-import { motion } from 'framer-motion'
+import Image from 'next/image'
+import NextJsIcon from '@/public/skills/nextjs.svg'
+import ReactJsIcon from '@/public/skills/reactjs.svg'
+import TailwindIcon from '@/public/skills/tailwind.svg'
+import ChakraIcon from '@/public/skills/chakra.svg'
 
 const About = () => {
+  const skills = [
+    {
+      name: 'NextJs',
+      icon: NextJsIcon
+    },
+    {
+      name: 'ReactJs',
+      icon: ReactJsIcon
+    },
+    {
+      name: 'TailwindCss',
+      icon: TailwindIcon
+    },
+    {
+      name: 'ChakaraUI',
+      icon: ChakraIcon
+    }
+  ]
   return (
-    <motion.section
-      initial={{ x: '100%' }}
-      animate={{ x: 0 }}
-      transition={{ ease: 'anticipate', duration: 1 }}
-      className='mt-[30rem]'>
+    <section id='About' className='pt-[30rem]'>
       <h3>About</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non eos ullam deleniti inventore, quis
-        voluptatibus, pariatur delectus doloribus officia consectetur quasi. Cum repellat perspiciatis culpa quisquam,
-        maiores doloremque dolore.
+        I am a self taught developer based in Houston, Texas. As a naturally curious person, I enjoy learning and
+        understanding new things. I stive to create simple and functional UI.{' '}
       </p>
-    </motion.section>
+      <h4 className='text-4xl text-center mt-6'>Favorite technolgies</h4>
+      <div className='mt-8 flex gap-8 justify-between'>
+        {skills.map((skill) => (
+          <div className='hover:scale-110'>
+            <Image src={skill.icon} alt='icon' />
+            {/* <p className=''>{skill.name}</p> */}
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 

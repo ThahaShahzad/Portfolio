@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
 import RmPic from '@/public/RM.png'
+import PSPic from '@/public/PSUIFix.jpeg'
 
 const Projects = () => {
   const projects = [
@@ -10,6 +10,8 @@ const Projects = () => {
       desription:
         ' Collaborated to build a tool which could analyze and evaluate the efficacy of exams and teaching strategies to improve students’ learning outcomes. Created a responsive and intuitive UI for users. Lead the front-end development efforts to create a web app.',
       techUsed: ['React', 'Bootstrap', 'Redux'],
+      link: 'https://reliabilitymeasures.com/',
+      codeLink: 'https://github.com/Reliability-Measures/RM-UI/tree/release',
       img: RmPic
     },
     {
@@ -17,25 +19,33 @@ const Projects = () => {
       desription:
         'Designed a proof of concept to provide efficient search and filter  features for ship tracking data. Coordinated efforts with the back-end team to efficiently achieve project goals. Utilized Google Maps API to visualize ship movement.',
       techUsed: ['React', 'Bootstrap', 'Redux'],
-      img: RmPic
+      link: undefined,
+      codeLink: 'https://github.com/ThahaShahzad/React-BootStrap-Redux',
+      img: PSPic
     }
   ]
+  //405.783×228.25
   return (
-    <section className='mt-[30rem]'>
-      <motion.h3 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: 'anticipate', duration: 2 }}>
-        Projects
-      </motion.h3>
+    <section id='Projects' className='pt-[30rem]'>
+      <h3>Projects</h3>
       <div className='mt-12'>
         {projects.map((project, i) => (
-          <motion.div
-            initial={{ x: `${i % 2 === 1 ? '100%' : '-100%'}` }}
-            animate={{ x: 0 }}
+          <div
             key={project.name}
-            transition={{ ease: 'anticipate', duration: 2 }}
-            className={`flex flex-col gap-4 mt-20 ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} `}>
-            <Image src={project.img} alt='project image' />
+            className={`flex flex-col gap-4 mt-20 ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+            <a className={`${project.link && 'hover:scale-105'}`} href={project.link} target='_blank'>
+              <Image src={project.img} alt='project image' />
+            </a>
             <div>
-              <h4>{project.name}</h4>
+              <h4>
+                <a className={`${project.link && 'underline'}`} href={project.link} target='_blank'>
+                  {project.name}
+                </a>{' '}
+                |{' '}
+                <a className='border-b-2 border-transparent hover:border-font' href={project.codeLink} target='_blank'>
+                  Code
+                </a>
+              </h4>
               <p>{project.desription}</p>
               <p className='mt-2 font-semibold text-primary'>
                 Technoligies used :
@@ -44,7 +54,7 @@ const Projects = () => {
                 ))}
               </p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
