@@ -13,7 +13,7 @@ const resume = () => {
       {/* <div className='max-w-screen-xl m-auto p-4 text-center md:text-left'> */}
       <section className='text-center pt-4'>
         <div className='flex justify-between'>
-          <Link href='/'>
+          <Link href='/' passHref>
             <BiArrowBack className='m-5 w-12 h-12 hover:scale-110' />
           </Link>
           <h1>Thaha Shahzad</h1>

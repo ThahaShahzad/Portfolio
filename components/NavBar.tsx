@@ -19,7 +19,7 @@ const NavBar = () => {
   const scrollPosition = useScrollPosition()
   return (
     <header
-      className={`hidden lg:flex justify-between items-center px-10 pb-2 pt-8 z-10 bg-bg fixed top-0 inset-x-0 ${
+      className={`hidden lg:flex justify-between items-center px-10 py-6 z-10 bg-bg fixed top-0 inset-x-0 ${
         scrollPosition !== 0 && 'border-b-2 border-bg-light'
       }`}>
       <div className='flex items-center gap-4' onClick={() => window.scrollTo(0, 0)}>

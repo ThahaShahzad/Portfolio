@@ -24,7 +24,7 @@ const About = () => {
     }
   ]
   return (
-    <section id='About' className='pt-[30rem]'>
+    <section id='About' className='pt-[10rem] mt-[20rem]'>
       <h3>About</h3>
       <p>
         I am a self taught developer based in Houston, Texas. As a naturally curious person, I enjoy learning and
@@ -33,7 +33,7 @@ const About = () => {
       <h4 className='text-4xl text-center mt-6'>Favorite technolgies</h4>
       <div className='mt-8 flex gap-8 justify-between'>
         {skills.map((skill) => (
-          <div className='hover:scale-110'>
+          <div key={skill.name} className='hover:scale-110'>
             <Image src={skill.icon} alt='icon' />
             {/* <p className=''>{skill.name}</p> */}
           </div>

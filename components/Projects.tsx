@@ -26,23 +26,27 @@ const Projects = () => {
   ]
   //405.783×228.25
   return (
-    <section id='Projects' className='pt-[30rem]'>
+    <section id='Projects' className='pt-[10rem] mt-[20rem]'>
       <h3>Projects</h3>
       <div className='mt-12'>
         {projects.map((project, i) => (
           <div
             key={project.name}
             className={`flex flex-col gap-4 mt-20 ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-            <a className={`${project.link && 'hover:scale-105'}`} href={project.link} target='_blank'>
+            <a className={`${project.link && 'hover:scale-105'}`} href={project.link} target='_blank' rel='noreferrer'>
               <Image src={project.img} alt='project image' />
             </a>
             <div>
               <h4>
-                <a className={`${project.link && 'underline'}`} href={project.link} target='_blank'>
+                <a className={`${project.link && 'underline'}`} href={project.link} target='_blank' rel='noreferrer'>
                   {project.name}
                 </a>{' '}
                 |{' '}
-                <a className='border-b-2 border-transparent hover:border-font' href={project.codeLink} target='_blank'>
+                <a
+                  className='border-b-2 border-transparent hover:border-font'
+                  href={project.codeLink}
+                  target='_blank'
+                  rel='noreferrer'>
                   Code
                 </a>
               </h4>
