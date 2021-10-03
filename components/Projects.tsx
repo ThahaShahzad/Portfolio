@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import RmPic from '@/public/RM.png'
 import PSPic from '@/public/PSUIFix.jpeg'
+import GIPic from '@/public/GreenInvesting.png'
 
 const Projects = () => {
   const projects = [
@@ -22,6 +23,15 @@ const Projects = () => {
       link: undefined,
       codeLink: 'https://github.com/ThahaShahzad/React-BootStrap-Redux',
       img: PSPic
+    },
+    {
+      name: 'GreenInvesting',
+      desription:
+        'Developed a MVP during a hackthon to help "Greenify" young peoples investment portfolio. Now that more people are continuos of climate change we were challenged by Goldman Sachs to "Build an application that helps the user evaluate the ESG friendliness of their portfolio and suggests options for investment that are in line with their aspirations".',
+      techUsed: ['Nextjs', 'TailwindCss', 'ChakraUI'],
+      link: 'https://green-investing-hack-dfw-2021.vercel.app/',
+      codeLink: 'https://github.com/ThahaShahzad/Green-Investing--HackDFW-2021',
+      img: GIPic
     }
   ]
   //405.783×228.25

@@ -28,8 +28,8 @@ const About = () => {
       <h3>About</h3>
       <p>
         I am a self taught developer based in Houston, Texas. As a naturally curious person, I enjoy learning and
-        understanding new web technologies. I am passionate to build scalable web applications and internal tools that
-        drastically improve user experience.
+        understanding new web technologies. I am passionate about building scalable web applications and internal tools
+        that drastically improve user experience.
       </p>
       <h4 className='text-4xl text-center mt-6'>Favorite technologies</h4>
       <div className='mt-8 flex gap-8 justify-between'>
