@@ -27,7 +27,7 @@ const Projects = () => {
     {
       name: 'GreenInvesting',
       desription:
-        'Developed a MVP during a hackthon to help "Greenify" young peoples investment portfolio. Now that more people are continuos of climate change we were challenged by Goldman Sachs to "Build an application that helps the user evaluate the ESG friendliness of their portfolio and suggests options for investment that are in line with their aspirations".',
+        'Developed a MVP during a hackthon to help "Greenify" young peoples investment portfolio. Now that more people are conscience of climate change we were challenged by Goldman Sachs to "Build an application that helps the user evaluate the ESG friendliness of their portfolio and suggests options for investment that are in line with their aspirations".',
       techUsed: ['Nextjs', 'TailwindCss', 'ChakraUI'],
       link: 'https://green-investing-hack-dfw-2021.vercel.app/',
       codeLink: 'https://github.com/ThahaShahzad/Green-Investing--HackDFW-2021',
