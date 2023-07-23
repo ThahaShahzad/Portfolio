@@ -111,7 +111,7 @@ const resume = () => {
         <div className='max-w-screen-xl m-auto p-4 text-center md:text-left'>
           <h3 className='text-left mt-5'>Experience</h3>
           {experiences.map((experience) => (
-            <article className='text-left'>
+            <article key={experience.company} className='text-left'>
               <h4 className='mt-4 text-xl'>
                 {experience.title} - {experience.company} - {experience.date}
               </h4>
@@ -120,38 +120,25 @@ const resume = () => {
               </p>
               <ul className='ml-8'>
                 {experience.points.map((point) => (
-                  <li className='mt-2 list-disc'> {point}</li>
+                  <li key={point} className='mt-2 list-disc'>
+                    {' '}
+                    {point}
+                  </li>
                 ))}
               </ul>
             </article>
           ))}
-
-          {/* <article className='text-left'>
-            <h4 className='mt-4 text-xl'>Reliability Measures - 3 month (contract) </h4>
-            <p className='mt-2 font-bold'>Used: React.js, Redux, React-Router Dom, and React-Hook-Form</p>
-            <p className='mt-2'>
-              Built a tool which could analyze and evaluate the effectiveness of exams and teaching strategies to
-              improve students’ learning outcomes
-            </p>
-          </article>
-          <article className='text-left'>
-            <h4 className='mt-4 text-xl'>Pole Star Global - 3 month (internship) </h4>
-            <p className='mt-2 font-bold'>Used: React.js, Redux, React-Router Dom, and React-Hook-Form</p>
-            <p className='mt-2'>
-              Designed a proof of concept to provide efficient search and filter features for ship tracking data
-            </p>
-          </article> */}
           <article className='text-left'>
             <h4 className='mt-5'>Skills</h4>
             <div className='flex justify-between mt-4'>
               <ul>
                 {skills1.map((skill) => (
-                  <li>{skill}</li>
+                  <li key={skill}>{skill}</li>
                 ))}
               </ul>
               <ul>
                 {skills2.map((skill) => (
-                  <li>{skill}</li>
+                  <li key={skill}>{skill}</li>
                 ))}
               </ul>
               <div></div>
@@ -163,7 +150,6 @@ const resume = () => {
           </article>
         </div>
       </section>
-      {/* </div> */}
     </main>
   )
 }
