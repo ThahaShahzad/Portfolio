@@ -3,6 +3,7 @@ import Image from 'next/image'
 import RmPic from '@/public/RM.png'
 import PSPic from '@/public/PSUIFix.jpeg'
 import GIPic from '@/public/GreenInvesting.png'
+import QTPic from '@/public/QT.png'
 
 const Projects = () => {
   const projects = [
@@ -32,6 +33,15 @@ const Projects = () => {
       link: 'https://green-investing-hack-dfw-2021.vercel.app/',
       codeLink: 'https://github.com/ThahaShahzad/Green-Investing--HackDFW-2021',
       img: GIPic
+    },
+    {
+      name: 'QuranTracker',
+      desription:
+        'Online management and learning tool for quran classes. Provides online registration, attendance tracking, assignment tracking, and online fees payment.',
+      techUsed: ['Nextjs', 'ChakraUI', 'Firebase', 'Prisma', 'Stripe'],
+      link: 'https://www.quran-tracker.com/',
+      codeLink: undefined,
+      img: QTPic
     }
   ]
   //405.783×228.25
@@ -53,7 +63,7 @@ const Projects = () => {
                 </a>{' '}
                 |{' '}
                 <a
-                  className='border-b-2 border-transparent hover:border-font'
+                  className={`border-b-2 border-transparent hover:border-font ${!project.codeLink && 'border-none'}`}
                   href={project.codeLink}
                   target='_blank'
                   rel='noreferrer'>
@@ -63,8 +73,8 @@ const Projects = () => {
               <p>{project.desription}</p>
               <p className='mt-2 font-semibold text-primary'>
                 Technoligies used :
-                {project.techUsed.map((tech) => (
-                  <span key={tech}> {tech} </span>
+                {project.techUsed.map((tech, i) => (
+                  <span key={tech}> {tech}</span>
                 ))}
               </p>
             </div>
